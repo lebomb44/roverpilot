@@ -1,0 +1,493 @@
+    1  ls
+    2  vi lb.wifi
+    3  sudo nano /etc/network/interfaces 
+    4  sudo nano /etc/wpa_supplicant/wpa_supplicant.conf 
+    5  reboot
+    6  sudo reboot
+    7  ifconfig
+    8  sudo nano /etc/wpa_supplicant/wpa_supplicant.conf 
+    9  sudo nano /etc/network/interfaces 
+   10  sudo nano /etc/wpa_supplicant/wpa_supplicant.conf 
+   11  sudo reboot
+   12  sudo nano /etc/network/interfaces 
+   13  sudo nano /etc/wpa_supplicant/wpa_supplicant.conf 
+   14  sudo reboot
+   15  sudo nano /etc/network/interfaces 
+   16  ifconfig
+   17  ifconfig wlan0 up
+   18  sudo ifconfig wlan0 up
+   19  ifconfig
+   20  sudo apt-get install wicd
+   21  sudo apt-get install wicd-curses
+   22  ifconfig
+   23  sudo reboot
+   24  ifconfig
+   25  sudo wicd-curses
+   26  sudo apt-get update
+   27  sudo apt-get dist-upgrade
+   28  sudo rpi-update
+   29  sudo reboot
+   30  ifconfig
+   31  sudo wicd-curses
+   32  cd /home/pi/RPi_Cam_Web_Interface
+   33  mkdir /home/pi/RPi_Cam_Web_Interface
+   34  cd /home/pi/RPi_Cam_Web_Interface
+   35  git clone https://github.com/silvanmelchior/RPi_Cam_Web_Interface.git
+   36  git pull origin master
+   37  ./RPi_Cam_Web_Interface_Installer.sh install
+   38  git pull origin master
+   39  git pull
+   40  ls
+   41  cd RPi_Cam_Web_Interface/
+   42  ls
+   43  git pull origin master
+   44  ./RPi_Cam_Web_Interface_Installer.sh install
+   45  ./RPi_Cam_Web_Interface_Installer.sh start
+   46  ifconfig
+   47  sudo ifconfig wlan0 up
+   48  ifconfig
+   49  netstat
+   50  netstat | grep 80
+   51  ps -aef | grep apac
+   52  cd /var/www/
+   53  ll
+   54  ls
+   55  cat index.php 
+   56  cat cmd_pipe.php 
+   57  ls
+   58  cat FIFO 
+   59  ls media/
+   60  cat cam.jpg 
+   61  ll
+   62  ls
+   63  pwd
+   64  ls
+   65  cd ..
+   66  ls
+   67  ps
+   68  ps -aef
+   69  man raspimjpeg
+   70  raspimjpeg -h
+   71  raspimjpeg 
+   72  cd www/
+   73  nano index.php 
+   74  nano js/script.js 
+   75  nano cmd_pipe.php 
+   76  lsof
+   77  lsof | grep FIFO
+   78  cd
+   79  cd RPi_Cam_Web_Interface/RPi_Cam_Web_Interface/
+   80  ls
+   81  cat RPi_Cam_Web_Interface_Installer.sh
+   82  cat RPi_Cam_Web_Interface_Installer.sh | grep FIFO
+   83  cat /etc/rc.local
+   84  lsof | grep FIFO
+   85  cd /var/www/
+   86  ls
+   87  cat FIFO
+   88  tail -f FIFO 
+   89  nano js/script.js 
+   90  cat cam_pic.php 
+   91  lsof | grep cam
+   92  ps -aef | grep cam
+   93  lsof /dev/shm/mjpeg/cam.jpg
+   94  cat /etc/rc.local
+   95  ps -aef | grep rasp
+   96  ps
+   97  ps -aef
+   98  cat /usr/share/wicd/daemon/monitor.py
+   99  ps -aef
+  100  cat /etc/raspimjpeg 
+  101  cat /dev/shm/mjpeg/cam.jpg
+  102  reset
+  103  cat /dev/shm/mjpeg/cam.jpg
+  104  62;9;c
+  105  cat /etc/raspimjpeg 
+  106  ll /dev/shm/mjpeg/cam.jpg
+  107  ls -als /dev/shm/mjpeg/cam.jpg
+  108  ls -als /dev/shm/mjpeg/*
+  109  cat /var/www/status_mjpeg.txt
+  110  ls -als
+  111  exit
+  112  sudo nano /etc/network/interfaces
+  113  sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+  114  sudo reboot
+  115  cd /etc/network/
+  116  sudo nano interfaces 
+  117  sudo nano interfaces [3~
+  118  ping 192.168.10.1
+  119  cat /etc/network/interfaces 
+  120  cat /etc/wpa_supplicant/wpa_supplicant.conf
+  121  sudo cat /etc/wpa_supplicant/wpa_supplicant.conf
+  122  sudo reboot
+  123  ping 192.168.10.1
+  124  sudo service network restart
+  125  sudo services network restart
+  126  sudo services
+  127  sudo service
+  128  sudo service --status-all
+  129  sudo service networking restart
+  130  ping 192.168.10.1
+  131  sudo service networking restart
+  132  ifconfig
+  133  sudo service networking restart
+  134  ifconfig
+  135  sudo service networking restart
+  136  ifconfig
+  137  ping 192.168.10.1
+  138  cd /etc/network/
+  139  sudo nano interfaces 
+  140  cat /etc/rc.local
+  141  cd /etc/init.d/
+  142  ls
+  143  cat networking 
+  144  cat /etc/default/networking
+  145  ps
+  146  ps -aef
+  147  ps -aef | grep w
+  148  sudo nano /etc/network/interfaces 
+  149  sudo adduser pi netdev
+  150  sudo service wicd restart
+  151  ifconfig
+  152  sudo apt-get install rcconf
+  153  sudo rcconf 
+  154  sudo reboot
+  155  ps -aef | grep wic
+  156  wicd-curses start
+  157  ifconfig
+  158  sudo nano /etc/wicd/manager-settings.conf
+  159  sudo service wicd start
+  160  wicd-curses start
+  161  ifconfig
+  162  sudo nano /etc/network/interfaces 
+  163  cat /etc/wicd/manager-settings.conf
+  164  sudo cat /etc/wicd/manager-settings.conf
+  165  sudo reboot
+  166  exit
+  167  sudo raspi-config
+  168  ifconfig
+  169  route -n
+  170  reboot
+  171  sudo reboot
+  172  ifconfig
+  173  history | grep lokan
+  174  ssh lokan@lokan.lw115.ultraseedbox.com -X
+  175  exit
+  176  ifconfig
+  177  exit
+  178  ls
+  179  ifconfig -a
+  180  cd /var/www/
+  181  ls
+  182  ll
+  183  ls -als
+  184  cat config.php 
+  185  cd /etc
+  186  cat raspimjpeg 
+  187  nano raspimjpeg 
+  188  sudo nano raspimjpeg 
+  189  ll
+  190  sudo reboot
+  191  passwd 
+  192  exit
+  193  ping bourdilot.no-ip.org
+  194  epiphany&
+  195  exit
+  196  epiphany-browser &
+  197  ps
+  198  kill 2933
+  199  ps
+  200  ls
+  201  ps
+  202  top
+  203  ls
+  204  ps
+  205  ping bourdilot.no-ip.org
+  206  ssh pi@bourdilot.no-ip.org -p 522
+  207  ls
+  208  ping bourdilot.no-ip.org
+  209  ls
+  210  cp
+  211  cd /var
+  212  cd www/
+  213  ls
+  214  ls -als
+  215  cp index.php index.php.ori
+  216  sudo cp index.php index.php.ori
+  217  sudo nano index.php
+  218  ls -als
+  219  cd css
+  220  ls
+  221  sudo nano style_minified.css 
+  222  cat style_minified.css 
+  223  ls
+  224  cd ..
+  225  ls
+  226  ls fonts/
+  227  sudo nano index.php
+  228  cd js/
+  229  ls
+  230  cat script.js 
+  231  cd ..
+  232  sudo nano index.php
+  233  cd css
+  234  grep One *
+  235  grep system *
+  236  grep collapse *
+  237  cd ..
+  238  sudo nano index.php
+  239  ls
+  240  cd js/
+  241  ls
+  242  cat script.js 
+  243  sudo nano pilot.js
+  244  ls
+  245  cd ..
+  246  ls
+  247  sudo nano js/script.js 
+  248  sudo nano js/pilot.js 
+  249  exit
+  250  ls
+  251  cd /var/www/
+  252  ls
+  253  sudo nano index.php
+  254  sudo nano js/pilot.js 
+  255  sudo nano index.php
+  256  sudo nano js/pilot.js 
+  257  ls
+  258  cp cmd_func.php pilot_func.php
+  259  sudo cp cmd_func.php pilot_func.php
+  260  sudo nano pilot_func.php 
+  261  ls
+  262  cat cmd_pipe.php 
+  263  sudo cp cmd_pipe.php pilot_pipe.php 
+  264  sudo rm pilot_func.php
+  265  sudo nano pilot_pipe.php 
+  266  sudo nano js/pilot.js 
+  267  sudo nano /etc/rc.local
+  268  ls
+  269  cd
+  270  ls
+  271  cd RPi_Cam_Web_Interface/
+  272  ls
+  273  cd RPi_Cam_Web_Interface/
+  274  ls
+  275  cat RPi_Cam_Web_Interface_Installer.sh 
+  276  nano RPi_Cam_Web_Interface_Installer.sh 
+  277  cat RPi_Cam_Web_Interface_Installer.sh | grep FIFO
+  278  sudo mknod /var/www/PILOT_FIFO p
+  279  sudo chmod 666 /var/www/PILOT_FIFO
+  280  sudo reboot
+  281  cd /var/www/
+  282  ls
+  283  ls -als
+  284  cat PILOT_FIFO
+  285  tail -f PILOT_FIFO
+  286  cat pilot_pipe.php 
+  287  php pilot_pipe.php 
+  288  sudo nano pilot_pipe.php 
+  289  php pilot_pipe.php 
+  290  tail -f PILOT_FIFO
+  291  sudo nano pilot_pipe.php 
+  292  tail -f PILOT_FIFO
+  293  cat pilot_pipe.php 
+  294  rm PILO_FIFO
+  295  sudo rm PILO_FIFO
+  296  cat ~/RPi_Cam_Web_Interface/RPi_Cam_Web_Interface/RPi_Cam_Web_Interface_Installer.sh 
+  297  ls
+  298  cat pilot_pipe.php 
+  299  cat PILOT_FIFO 
+  300  cat status_mjpeg.txt
+  301  ls -als
+  302  sudo nano index.php
+  303  ping bourdilot.no-ip.org
+  304  sudo nano index.php
+  305  sudo nano js/pilot.js 
+  306  exit
+  307  cd /var/www/
+  308  ls
+  309  sudo nano js/pilot.js 
+  310  sudo nano pilot_pipe.php 
+  311  sudo nano js/pilot.js 
+  312  sudo nano index.php
+  313  exit
+  314  ls
+  315  cd /var/www/
+  316  ls
+  317  cd
+  318  ls
+  319  mkdir RoverPilot
+  320  cd RoverPilot/
+  321  nano RoverPilot.py
+  322  which python
+  323  nano RoverPilot.py
+  324  chmod +x RoverPilot.py 
+  325  ./RoverPilot.py 
+  326  sudo ./RoverPilot.py 
+  327  cat RoverPilot.py 
+  328  nano RoverPilot.py
+  329  sudo ./RoverPilot.py 
+  330  nano RoverPilot.py
+  331  sudo ./RoverPilot.py 
+  332  nano RoverPilot.py
+  333  sudo ./RoverPilot.py 
+  334  nano RoverPilot.py
+  335  sudo ./RoverPilot.py 
+  336  nano RoverPilot.py
+  337  sudo ./RoverPilot.py 
+  338  nano RoverPilot.py
+  339  sudo ./RoverPilot.py 
+  340  nano RoverPilot.py
+  341  sudo ./RoverPilot.py 
+  342  nano RoverPilot.py
+  343  sudo ./RoverPilot.py 
+  344  nano RoverPilot.py
+  345  sudo ./RoverPilot.py 
+  346  nano RoverPilot.py
+  347  sudo ./RoverPilot.py 
+  348  nano RoverPilot.py
+  349  sudo ./RoverPilot.py 
+  350  nano RoverPilot.py
+  351  sudo ./RoverPilot.py 
+  352  nano RoverPilot.py
+  353  sudo ./RoverPilot.py 
+  354  nano RoverPilot.py
+  355  sudo ./RoverPilot.py 
+  356  nano RoverPilot.py
+  357  sudo ./RoverPilot.py 
+  358  exit
+  359  ls
+  360  cd /var/www/
+  361  sudo nano index.php
+  362  sudo nano js/pilot.js 
+  363  cd
+  364  cd RoverPilot/
+  365  nano RoverPilot.py 
+  366  ./RoverPilot.py 
+  367  sudo ./RoverPilot.py 
+  368  nano RoverPilot.py 
+  369  sudo ./RoverPilot.py 
+  370  nano RoverPilot.py 
+  371  sudo ./RoverPilot.py 
+  372  nano RoverPilot.py 
+  373  sudo ./RoverPilot.py 
+  374  ps
+  375  ps -aef
+  376  ps -aef | grep nanao
+  377  ps -aef | grep nan
+  378  kill 13395
+  379  ps -aef | grep nan
+  380  pwd
+  381  cd RoverPilot/
+  382  nano RoverPilot.py
+  383  exit
+  384  find /usr | grep -i gpio
+  385  ls
+  386  cd RoverPilot/
+  387  ls
+  388  nano RoverPilot.py 
+  389  ./RoverPilot.py 
+  390  sudo ./RoverPilot.py 
+  391  cat RoverPilot.py 
+  392  nano RoverPilot.py 
+  393  nano /etc/openvpn/easy-rsa/keys/Default.txt
+  394  sudo apt-get install openvpn
+  395  nano /etc/openvpn/easy-rsa/keys/Default.txt
+  396  sudo -s
+  397  wget https://gist.githubusercontent.com/maxauvy/5491c8823545f6e2a2af/raw/c7dbac2018bd0fcc1178d4d5959f966191635ab4/MakeOpenVPN.sh
+  398  cat MakeOpenVPN.sh 
+  399  su -s
+  400  sudo -s
+  401  exit
+  402  ls
+  403  ifconfig
+  404  arp bourdilot.no-ip.org
+  405  arp cambon.no-ip.org
+  406  exit
+  407  cd RoverPilot/
+  408  sudo ./RoverPilot.py
+  409  nano RoverPilot.py
+  410  sudo ./RoverPilot.py
+  411  idle RoverPilot.py&
+  412  sudo ./RoverPilot.py
+  413  exit
+  414  cd RoverPilot/
+  415  ls
+  416  idle RoverPilot.py&
+  417  sudp RoverPilot.py
+  418  sudo RoverPilot.py
+  419  sudo ./RoverPilot.py
+  420  sudo apt-get install lirc
+  421  sudo nano /etc/modules 
+  422  sudo nano /etc/lirc/hardware.conf 
+  423  sudo nano /etc/modules 
+  424  sudo /etc/init.d/lirc stop
+  425  sudo /etc/init.d/lirc start
+  426  sudo nano /boot/config.txt 
+  427  sudo /etc/init.d/lirc stop
+  428  sudo /etc/init.d/lirc start
+  429  irsend 
+  430  irsend -h
+  431  irsend samsung
+  432  irsend samsung KEY_POWER
+  433  irsend SEND_ONCE samsung KEY_POWER
+  434  lsmod
+  435  reboot
+  436  sudo reboot
+  437  lsmod
+  438  irsend SEND_ONCE samsung KEY_POWER
+  439  pwd
+  440  wget http://lirc.sourceforge.net/remotes/samsung/AA59-10026E
+  441  irsend SEND_ONCE AA59-10026E KEY_POWER
+  442  sudo /etc/init.d/lirc stop
+  443  mode2 -d /dev/lirc0
+  444  ll
+  445  ls
+  446  cat /dev/lirc0 
+  447  sudo /etc/init.d/lirc start
+  448  cat /etc/lirc/lircd.conf
+  449  irexec 
+  450  irexec -h
+  451  which irsend 
+  452  ldd /usr/bin/irsend
+  453  irsend SEND_ONCE AA59-10026E KEY_POWER
+  454  irsend SEND_ONCE AA59-10026E KEY_POWER -d /dev/lirc0 
+  455  sudo irsend SEND_ONCE AA59-10026E KEY_POWER -d /dev/lirc0 
+  456  ps -aef | grep lirc
+  457  sudo /etc/init.d/lirc start
+  458  ps -aef | grep lirc
+  459  sudo irsend SEND_ONCE AA59-10026E KEY_POWER -d /dev/lirc0 
+  460  sudo irsend SEND_ONCE AA59-10026E KEY_POWER -d lircd
+  461  sudo irsend SEND_ONCE AA59-10026E KEY_POWER
+  462  cat /var/run/lirc/
+  463  sudo chmod +x /etc/init.d/lirc
+  464  sudo update-rc.d lirc defaults
+  465  ps -aef | grep lirc
+  466  sudo /etc/init.d/lirc start
+  467  ps -aef | grep lirc
+  468  sudo irsend SEND_ONCE AA59-10026E KEY_POWER
+  469  cat /etc/init.d/lirc 
+  470  cat /etc/lirc/lircd.conf
+  471  sudo nano /etc/modules 
+  472  sudo nano /etc/lirc/hardware.conf 
+  473  cat AA59-10026E 
+  474  sudo cp AA59-10026E /etc/lirc/lircd.conf 
+  475  sudo /etc/init.d/lirc stop
+  476  sudo /etc/init.d/lirc start
+  477  sudo irsend SEND_ONCE AA59-10026E KEY_POWER
+  478  cat AA59-10026E 
+  479  sudo irsend SEND_ONCE Samsung_AA59-10026E KEY_POWER
+  480  cat AA59-10026E 
+  481  wget http://lirc.sourceforge.net/remotes/samsung/AA59-00600A.conf
+  482  sudo cp AA59-00600A.conf /etc/lirc/lircd.conf 
+  483  sudo /etc/init.d/lirc stop
+  484  sudo /etc/init.d/lirc start
+  485  sudo irsend SEND_ONCE Samsung_AA59-10026E KEY_POWER
+  486  cat AA59-00600A.conf
+  487  sudo irsend SEND_ONCE SAMSUNG_AA59-00600A KEY_POWER
+  488  sudo irsend SEND_ONCE SAMSUNG_AA59-00600A_POWER KEY_POWER
+  489  cd RoverPilot/
+  490  echo "sudo irsend SEND_ONCE SAMSUNG_AA59-00600A_POWER KEY_POWER" > ir.txt
+  491  cat ir.txt 
+  492  history 
+  493  history > history

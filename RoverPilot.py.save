@@ -1,0 +1,141 @@
+#!/usr/bin/python
+
+import time
+import RPi.GPIO as GPIO
+
+def setDC(dc, step):
+    dc = dc +step
+    if 100 < dc:
+        dc = 100
+    if 0 > dc:
+        dc = 0
+    return dc
+
+
+
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(22, GPIO.OUT)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(23, GPIO.OUT)
+
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(, GPIO.OUT)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(11, GPIO.OUT)
+
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(8, GPIO.OUT)
+
+
+pilotFrontBack = GPIO.PWM(12, 50)  # channel=12 frequency=50Hz
+pilotFrontBack_DC = 50
+pilotFrontBack.start(pilotFrontBack_DC)
+pilotLeftRight = GPIO.PWM(13, 50)  # channel=12 frequency=50Hz
+pilotLeftRight_DC = 50
+pilotLeftRight.start(pilotFrontBack_DC)
+
+tiltUpDown = GPIO.PWM(10, 50)  # channel=12 frequency=50Hz
+tiltUpDown_DC = 50
+tiltUpDown.start(tiltUpDown_DC)
+panLeftRight = GPIO.PWM(11, 50)  # channel=12 frequency=50Hz
+panLeftRight_DC = 50
+panLeftRight.start(panLeftRight_DC)
+
+powerLockUnlock = GPIO.PWM(8, 50)  # channel=12 frequency=50Hz
+powerLockUnlock.start(0)
+
+
+try:
+    while 1:
+        print "Loop"
+        with open("/var/www/PILOT_FIFO") as f:
+            line = f.readline()
+            cmd = line.rstrip('\n')
+            print cmd
+
+            if "pilotFront" == cmd:
+                pilotFrontBack_DC = setDC(pilotFrontBack_DC, 10)
+                pilotFrontBack.ChangeDutyCycle(pilotFrontBack_DC)
+                print pilotFrontBack_DC
+            if "pilotBack" == cmd:
+                pilotFrontBack_DC = setDC(pilotFrontBack_DC, -10)
+                pilotFrontBack.ChangeDutyCycle(pilotFrontBack_DC)
+                print pilotFrontBack_DC
+
+            if "pilotLeft" == cmd:
+                pilotLeftRight_DC = setDC(pilotLeftRight_DC, 10)
+                pilotLeftRight.ChangeDutyCycle(pilotLeftRight_DC)
+                print pilotLeftRight_DC
+            if "pilotRight" == cmd:
+                pilotLeftRight_DC = setDC(pilotLeftRight_DC, -10)
+                pilotLeftRight.ChangeDutyCycle(pilotLeftRight_DC)
+                print pilotLeftRight_DC
+
+            if "pilotStop" == cmd:
+                pilotFrontBack_DC = 50
+                pilotLeftRight_DC = 50
+                pilotFrontBack.ChangeDutyCycle(pilotFrontBack_DC)
+                pilotLeftRight.ChangeDutyCycle(pilotLeftRight_DC)
+                print pilotFrontBack_DC
+                print pilotLeftRight_DC
+
+            if "tiltUp" == cmd:
+                tiltUpDown_DC = setDC(tiltUpDown_DC, 10)
+                tiltUpDown.ChangeDutyCycle(tiltUpDown_DC)
+                print tiltUpDown_DC
+            if "tiltDown" == cmd:
+                tiltUpDown_DC = setDC(tiltUpDown_DC, -10)
+                tiltUpDown.ChangeDutyCycle(tiltUpDown_DC)
+                print tiltUpDown_DC
+
+            if "panLeft" == cmd:
+                panLeftRight_DC = setDC(panLeftRight_DC, 10)
+                panLeftRight.ChangeDutyCycle(panLeftRight_DC)
+                print panLeftRight_DC
+            if "panRight" == cmd:
+                panLeftRight_DC = setDC(panLeftRight_DC, -10)
+                panLeftRight.ChangeDutyCycle(panLeftRight_DC)
+                print panLeftRight_DC
+
+            if "ptzCenter" == cmd:
+                tiltUpDown_DC = 50
+                panLeftRight_DC = 50
+                tiltUpDown.ChangeDutyCycle(tiltUpDown_DC)
+                panLeftRight.ChangeDutyCycle(panLeftRight_DC)
+                print tiltUpDown_DC
+                print panLeftRight_DC
+            if "ptzPower" == cmd:
+                tiltUpDown_DC = 0
+                panLeftRight_DC = 50
+                tiltUpDown.ChangeDutyCycle(tiltUpDown_DC)
+                panLeftRight.ChangeDutyCycle(panLeftRight_DC)
+                print tiltUpDown_DC
+                print panLeftRight_DC
+
+            if "powerLock" == cmd:
+                powerLockUnlock.ChangeDutyCycle(0)
+                print "Power Locked"
+            if "powerUnlock" == cmd:
+                powerLockUnlock.ChangeDutyCycle(100)
+                print "Power Unlocked"
+
+
+
+        time.sleep(0.1)
+except KeyboardInterrupt:
+    print "Bye Bye !!"
+
+except:
+    print "Bye bye by another eception"
+
+finally:
+    print "Clearing GPIO"
+    pilotFrontBack.stop()
+    pilotLeftRight.stop()
+    tiltUpDown.stop()
+    panLeftRight.stop()
+    powerLockUnlock.stop()
+
+    GPIO.cleanup()
+
+
